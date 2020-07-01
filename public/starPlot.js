@@ -142,6 +142,7 @@ function starPlot(id, data, options){
         */
         ; //implement animation when mouse goes over a data area
 
+  /*
   var namesListWidth = config.w / 3;
   var namesListHeight = config.h;
 
@@ -158,4 +159,5 @@ function starPlot(id, data, options){
       .enter()
       .append("li")
       .attr("class", "name");
+  */
 }
