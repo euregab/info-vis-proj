@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Star-plot per il progetto di InfoVis" />
+  <meta charset="utf-8">
+  <title>InfoVis - Starplot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Gabriele D'Angelo">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="starPlot.js"></script>
+</head>
+
+<body>
+
+  <div class="starPlot">
+
+  </div>
+
+  <script>
+    var data = [
+      [//Mew
+        {axis:"Attack",value: 100},
+        {axis:"Defense",value: 100},
+        {axis:"Special Attack",value: 100},
+        {axis:"Special Defense",value: 100},
+        {axis:"Speed",value: 100},
+      ],
+      [//Articuno
+        {axis:"Attack",value: 85},
+        {axis:"Defense",value: 100},
+        {axis:"Special Attack",value: 95},
+        {axis:"Special Defense",value: 125},
+        {axis:"Speed",value: 85},
+      ],
+      [//Zapdos
+        {axis:"Attack",value: 90},
+        {axis:"Defense",value: 85},
+        {axis:"Special Attack",value: 125},
+        {axis:"Special Defense",value: 90},
+        {axis:"Speed",value: 100},
+      ],
+      [//Moltres
+        {axis:"Attack",value: 100},
+        {axis:"Defense",value: 90},
+        {axis:"Special Attack",value: 125},
+        {axis:"Special Defense",value: 85},
+        {axis:"Speed",value: 90},
+      ],
+      [//Mewtwo
+        {axis:"Attack",value: 110},
+        {axis:"Defense",value: 90},
+        {axis:"Special Attack",value: 154},
+        {axis:"Special Defense",value: 100},
+        {axis:"Speed",value: 130},
+      ],
+      [//Raikou
+        {axis:"Attack",value: 85},
+        {axis:"Defense",value: 75},
+        {axis:"Special Attack",value: 115},
+        {axis:"Special Defense",value: 100},
+        {axis:"Speed",value: 115},
+      ],
+      [//Entei
+        {axis:"Attack",value: 115},
+        {axis:"Defense",value: 85},
+        {axis:"Special Attack",value: 90},
+        {axis:"Special Defense",value: 75},
+        {axis:"Speed",value: 100},
+      ],
+      [//Suicune
+        {axis:"Attack",value: 75},
+        {axis:"Defense",value: 115},
+        {axis:"Special Attack",value: 90},
+        {axis:"Special Defense",value: 115},
+        {axis:"Speed",value: 85},
+      ],
+      [//Lugia
+        {axis:"Attack",value: 90},
+        {axis:"Defense",value: 130},
+        {axis:"Special Attack",value: 90},
+        {axis:"Special Defense",value: 154},
+        {axis:"Speed",value: 110},
+      ],
+      [//Ho-Oh
+        {axis:"Attack",value: 130},
+        {axis:"Defense",value: 90},
+        {axis:"Special Attack",value: 110},
+        {axis:"Special Defense",value: 154},
+        {axis:"Speed",value: 90},
+      ],
+    ];
+
+    var margin = {top: 75, right: 75, bottom: 75, left: 75},
+			width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+			height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+    var plotOptions = {
+		  w: width,
+		  h: height,
+		  margin: margin,
+		  maxValue: 0.5,
+		  levels: 3,
+		};
+
+    starPlot(".starPlot", data, plotOptions);
+  </script>
+
+</body>
+</html>
